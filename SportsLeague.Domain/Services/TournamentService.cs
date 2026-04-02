@@ -179,7 +179,8 @@ public class TournamentService : ITournamentService
         var tournamentTeams = await _tournamentTeamRepository
             .GetByTournamentAsync(tournamentId);
 
-        return tournamentTeams.Select(tt => tt.Team);
+        return tournamentTeams.Select(tt => tt.Team); // devuelve solo los equipos inscritos
+        
     }
 }
 
