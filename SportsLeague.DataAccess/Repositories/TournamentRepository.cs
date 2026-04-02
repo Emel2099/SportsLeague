@@ -26,6 +26,7 @@ public class TournamentRepository : GenericRepository<Tournament>, ITournamentRe
             .Where(t => t.Id == id)
             .Include(t => t.TournamentTeams)
                 .ThenInclude(tt => tt.Team)
+                //.ThenInclude(t => t.Players) Si se desea incluir los jugadores de cada equipo
             .FirstOrDefaultAsync();
     }
 }
