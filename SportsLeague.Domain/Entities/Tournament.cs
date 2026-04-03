@@ -12,5 +12,7 @@ public class Tournament : AuditBase
 
     // Navigation Properties
     public ICollection<TournamentTeam> TournamentTeams { get; set; } = new List<TournamentTeam>();
+    public ICollection<TournamentSponsor> TournamentSponsors { get; set; } = new List<TournamentSponsor>();
+    //Un torneo puede tener múltiples patrocinadores así que agregamos la propiedad de navegación
 }
 

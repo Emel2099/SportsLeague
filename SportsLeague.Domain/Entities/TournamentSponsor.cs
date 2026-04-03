@@ -1,7 +1,7 @@
 ﻿
 namespace SportsLeague.Domain.Entities
 {
-    internal class TournamentSponsor : AuditBase
+    public class TournamentSponsor : AuditBase
     {
         public int TournamentId { get; set; }
 
@@ -11,11 +11,10 @@ namespace SportsLeague.Domain.Entities
 
         public DateTime JoinedAt { get; set; } // Fecha de vinculación
 
+        
         // Navigation Properties
-
-        public Sponsor Sponsor { get; set; } = null!;
-
         public Tournament Tournament { get; set; } = null!;
+        public Sponsor Sponsor { get; set; } = null!;
 
     }
 }
