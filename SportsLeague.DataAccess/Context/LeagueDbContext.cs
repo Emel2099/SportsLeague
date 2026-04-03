@@ -175,7 +175,7 @@ public class LeagueDbContext : DbContext
             entity.HasKey(ts => ts.Id);
             entity.Property(ts => ts.ContractAmount)
                   .IsRequired()
-                  .HasColumnType("decimal(11,2)"); //Cantidad
+                  .HasColumnType("decimal(11,2)"); //Valor monetario del contrato
             entity.Property(ts => ts.JoinedAt)
                   .IsRequired();
             entity.Property(ts => ts.CreatedAt)
